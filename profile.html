@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملف الشخصي</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style-we.css">
+
+</head>
+
+<body id="profile">
+    <header>
+        <div class="container">
+            <div class="logo">
+                <div class="img"><img src="static/images/Gharbia Directorate of Education emblem.png" alt=""></div>
+                <h1>الشهيد علي زكريا </h1>
+            </div>
+
+
+            <section class="profile">
+                <div class="container">
+                    <div class="box">
+                        <h1>ملفك الشخصي</h1>
+                        <p>مرحبًا بك في ملفك الشخصي! هنا يمكنك عرض وتحديث معلوماتك الشخصية.</p>
+
+                        <!-- المعلومات الشخصية -->
+                        <h2>معلوماتك الشخصية</h2>
+                        <ul>
+                            <li><strong>الاسم:</strong> <span id="userName"></span></li>
+                            <li><strong>البريد الإلكتروني:</strong> <span id="userEmail"></span></li>
+                        </ul>
+
+                        <!-- تحديث البيانات -->
+                        <h2>تحديث معلوماتك</h2>
+                        <form id="updateForm">
+                            <label for="name">الاسم:</label>
+                            <input type="text" id="name" name="name" required>
+
+                            <label for="email">البريد الإلكتروني:</label>
+                            <input type="email" id="email" name="email" required>
+
+                            <button type="submit">تحديث المعلومات</button>
+                        </form>
+
+                        <!-- النتائج -->
+                        <h2>نتائجك السابقة</h2>
+                        <p>هنا يمكنك عرض نتائجك السابقة في الامتحانات.</p>
+
+                        <div id="resultsContainer"></div>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="transfers">
+                <div class="box-transfers">
+                    <a class="transfers-1" href="index.html">صفحه رئيسية</a>
+                    <a class="transfers-1" href="we.html">عنا</a>
+                    <a class="transfers-1" href="Theater.html">الفعاليات مسرحية</a>
+                    <a class="transfers-1" href="news.html">الاخبار</a>
+                </div>
+            </div>
+
+            <script>
+                // المواد
+                const subjects = [
+                    { name: "الرياضيات", key: "math" },
+                    { name: "العلوم المتكاملة", key: "science" },
+                    { name: "التربية الدينية المسيحية", key: "christian_religion" },
+                    { name: "التربية الدينية الإسلامية", key: "islamic_religion" },
+                    { name: "اللغة الإنجليزية", key: "english" }
+                ];
+
+                // عرض اسم المستخدم وبريده
+                document.getElementById('userName').textContent = localStorage.getItem('userName') || 'غير محدد';
+                document.getElementById('userEmail').textContent = localStorage.getItem('userEmail') || 'غير محدد';
+
+                // تحديث البيانات الشخصية
+                document.getElementById('updateForm').addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+
+                    localStorage.setItem('userName', name);
+                    localStorage.setItem('userEmail', email);
+
+                    document.getElementById('userName').textContent = name;
+                    document.getElementById('userEmail').textContent = email;
+
+                    alert("تم تحديث البيانات بنجاح ✅");
+                });
+
+                // عرض النتائج
+                const resultsContainer = document.getElementById('resultsContainer');
+                let total = 0;
+
+                subjects.forEach(subject => {
+                    // جلب الدرجة من localStorage أو إنشاء قيمة عشوائية
+                    let grade = parseFloat(localStorage.getItem(subject.key)) || Math.floor(Math.random() * 41) + 60; // من 60 إلى 100
+                    total += grade;
+
+                    // حفظ الدرجة في localStorage
+                    localStorage.setItem(subject.key, grade);
+
+                    // إنشاء عنصر النتيجة
+                    const resultDiv = document.createElement('div');
+                    resultDiv.classList.add('result');
+                    resultDiv.innerHTML = `
+            <span>${subject.name} - ${grade}%</span>
+            <div class="bar"><div class="fill" style="width:${grade}%"></div></div>
+        `;
+                    resultsContainer.appendChild(resultDiv);
+                });
+
+                // حساب المتوسط
+                const average = total / subjects.length;
+                const averageDiv = document.createElement('div');
+                averageDiv.classList.add('average');
+                averageDiv.textContent = "المتوسط العام: " + average.toFixed(1) + "%";
+                resultsContainer.appendChild(averageDiv);
+            </script>
+
+</body>
+
+</html>
