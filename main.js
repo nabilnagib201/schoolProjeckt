@@ -108,11 +108,13 @@ if (document.body.id === "quiz") {
 
     let nextBtn = document.getElementById("next");
     let backBtn = document.getElementById("back");
-    let chekBtn = document.getElementById("check");
+    let checkBtn = document.getElementById("check");
 
     let count = 1;
     nextBtn.onclick = function () {
-
+        for (let i = 0; i < document.getElementsByClassName("answer").length; i++) {
+            document.getElementsByClassName("answer")[i].style.cssText = "color:black;background-color:white;";
+        }
         document.getElementById(`question${count + 1}`).setAttribute("class", "active");
         document.getElementById(`question${count}`).setAttribute("class", " ");
         count++;
@@ -124,6 +126,16 @@ if (document.body.id === "quiz") {
         document.getElementById(`question${count - 1}`).setAttribute("class", "active");
         count--;
     };
+
+    checkBtn.addEventListener("click", () => {
+        let checkedAnswer = document.getElementById("active-answer");
+        let checkedImg = document.querySelector(".active");
+        if (checkedAnswer.classList.item(1) == checkedImg.alt) {
+            checkedAnswer.style.cssText = "background-color:#28a745;color:white;";
+        } else {
+            document.getElementById("active-answer").style.cssText = "background-color:#dc3545;color:white;"
+        }
+    });
 
     let answer = document.getElementsByClassName("answer");
     let answers = document.getElementsByClassName("answer");
