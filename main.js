@@ -4,8 +4,6 @@
 
 
 
-
-
 if (document.body.id === "home") {
     let icon = document.querySelector(".icon-links");
     let items = document.querySelectorAll("header nav ul li");
@@ -130,6 +128,7 @@ if (document.body.id === "quiz") {
     checkBtn.addEventListener("click", () => {
         let checkedAnswer = document.getElementById("active-answer");
         let checkedImg = document.querySelector(".active");
+        console.log(checkedAnswer.classList.item(1) == checkedImg.alt);
         if (checkedAnswer.classList.item(1) == checkedImg.alt) {
             checkedAnswer.style.cssText = "background-color:#28a745;color:white;";
         } else {

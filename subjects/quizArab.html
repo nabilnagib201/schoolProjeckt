@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
@@ -16,42 +16,54 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-     <link rel="icon" href="../static/images/logo.jpeg">
-
 </head>
 
 <body id="quiz">
+    <!-- start header  -->
+
     <header>
         <div class="container">
-            <div class="logoA">
-                <div class="imgA"><img src="images/Gharbia Directorate of Education emblem.png" alt=""></div>
+            <div class="logo">
+                <div class="img"><img src="static/images/Gharbia Directorate of Education emblem.png" alt=""></div>
                 <h1>الشهيد علي زكريا </h1>
-            </div>
-        </div>
+                <div class="icon-links"><i class="fa-solid fa-bars"></i></div>
 
+            </div>
+            <nav>
+                <ul class="links">
+                    <li><a href="index.html" class="active">الرئيسية</a></li>
+                    <li><a href="books.html">ملخصات</a></li>
+                    <li><a href="we.html">نحن</a></li>
+                    <li><a href="profile.html">حسابك</a></li>
+                </ul>
+
+                <!-- <button>تقدم</button> -->
+            </nav>
+        </div>
     </header>
+    <!-- end header  -->
     <div class="test">
         <div class="container">
             <div class="question">
-                <img src="../static/images/question.png" id="question2" class="" alt="">
-                <img src="../static/images/question.png" id="question1" class="active" alt="">
-                <img src="../static/images/question.png" id="question3" class="" alt="">
-                <img src="../static/images/question.png" id="question3" class="" alt="">
+                <img src="../static/images/question.png" id="question2" class="" alt="A">
+                <img src="../static/images/question.png" id="question1" class="active" alt="A">
+                <img src="../static/images/question.png" id="question3" class="" alt="B">
             </div>
             <div class="answers">
-                <div id="" class="answer">
+                <div id="" class="answer A">
                     <p> <span id=""></span>أ</p>
                 </div>
-                <div id="active-answer" class="answer">
+                <div id="active-answer" class="answer B">
                     <p>ب <span id="active-span"></span></p>
                 </div>
-                <div id="" class="answer">
+                <div id="" class="answer C">
                     <p> <span id=""></span>ج</p>
                 </div>
-                <div id="" class="answer">
+                <div id="" class="answer D">
                     <p> <span id=""></span>د</p>
                 </div>
                 <div class="btn">
+                    <button id="check">تحقق</button>
                     <button id="next">التالي</button>
                     <button id="back">السابق</button>
 
