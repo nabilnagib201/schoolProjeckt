@@ -99,11 +99,6 @@ if (document.body.id == "quiz-list") {
 
 
 if (document.body.id === "quiz") {
-
-
-
-
-
     let nextBtn = document.getElementById("next");
     let backBtn = document.getElementById("back");
     let checkBtn = document.getElementById("check");
@@ -125,14 +120,24 @@ if (document.body.id === "quiz") {
         count--;
     };
 
-    checkBtn.addEventListener("click", () => {
+    checkBtn.addEventListener("click", (e) => {
+
         let checkedAnswer = document.getElementById("active-answer");
         let checkedImg = document.querySelector(".active");
         console.log(checkedAnswer.classList.item(1) == checkedImg.alt);
         if (checkedAnswer.classList.item(1) == checkedImg.alt) {
+            for (let i = 0; i < document.getElementsByClassName("answer").length; i++) {
+                document.getElementsByClassName("answer")[i].style.cssText = "background-color:red;color:white;";
+            }
             checkedAnswer.style.cssText = "background-color:#28a745;color:white;";
         } else {
-            document.getElementById("active-answer").style.cssText = "background-color:#dc3545;color:white;"
+            for (let i = 0; i < document.getElementsByClassName("answer").length; i++) {
+                if (document.getElementsByClassName("answer")[i].classList.item(1) == checkedImg.alt) {
+                    document.getElementsByClassName("answer")[i].style.cssText = "background-color:#28a745;color:white;";
+                }
+            }
+
+            document.getElementById("active-answer").style.cssText = "background-color:#dc3545;color:white;";
         }
     });
 
