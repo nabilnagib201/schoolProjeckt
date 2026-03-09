@@ -301,15 +301,3 @@ footer {
         font-size: 16px;
     }
 }
-
-/* ================= Start Photos ================= */
-.photo {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    object-fit: cover;
-    display: block;
-    margin: 20px auto;
-    border: 2px solid #333;
-}
-/* ================= End Photos ================= */

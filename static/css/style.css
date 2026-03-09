@@ -6,34 +6,6 @@
 
 /* End variabels */
 
-/* Responsive adjustments */
-/* @media (max-width: 1200px) {
-    .landing h1 { font-size: 50px; }
-    .landing .text p { font-size: 25px; }
-}
-
-@media (max-width: 992px) {
-    .landing h1 { font-size: 40px; }
-    .landing .text p { font-size: 20px; }
-    .landing .pages .box { padding: 25px 15px; }
-}
-
-@media (max-width: 768px) {
-    .landing h1 { font-size: 32px; }
-    .landing .text p { font-size: 18px; }
-    .landing .pages { display: none; }
-    .about-school .content { flex-direction: column; text-align: center; }
-    .about-school .img { width: 90%; margin: 20px auto; }
-    .opinion-contentA { flex-direction: column; text-align: center; }
-}
-
-@media (max-width: 576px) {
-    .landing h1 { font-size: 28px; }
-    .landing .text p { font-size: 16px; }
-    .profile .box { padding: 25px; }
-    .test .question, .test .answers { max-width: 100%; flex: 1 1 100%; }
-} */
-/* End responsive adjustments */
 /* start global rules */
 * {
     box-sizing: border-box;
@@ -84,7 +56,10 @@ header {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
+    position: sticky;
+    top: 0px;
+    z-index: 44;
+    background-color: white;
 }
 
 header .img {
