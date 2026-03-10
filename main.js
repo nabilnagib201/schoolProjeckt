@@ -114,7 +114,9 @@ if (document.body.id === "quiz") {
     };
     let countLess = document.getElementsByTagName("img").length - 1;
     backBtn.onclick = function () {
-
+        for (let i = 0; i < document.getElementsByClassName("answer").length; i++) {
+            document.getElementsByClassName("answer")[i].style.cssText = "color:black;background-color:white;";
+        }
         document.getElementById(`question${count}`).setAttribute("class", " ");
         document.getElementById(`question${count - 1}`).setAttribute("class", "active");
         count--;
@@ -130,14 +132,15 @@ if (document.body.id === "quiz") {
                 document.getElementsByClassName("answer")[i].style.cssText = "background-color:red;color:white;";
             }
             checkedAnswer.style.cssText = "background-color:#28a745;color:white;";
+            return 1;
         } else {
             for (let i = 0; i < document.getElementsByClassName("answer").length; i++) {
                 if (document.getElementsByClassName("answer")[i].classList.item(1) == checkedImg.alt) {
                     document.getElementsByClassName("answer")[i].style.cssText = "background-color:#28a745;color:white;";
                 }
             }
-
             document.getElementById("active-answer").style.cssText = "background-color:#dc3545;color:white;";
+            return 0;
         }
     });
 
