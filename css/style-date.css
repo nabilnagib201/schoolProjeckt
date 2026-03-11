@@ -1,0 +1,333 @@
+/* ================= Start Variables ================= */
+:root {
+    --maincolor: #1f496f;
+    --secondcolor: #fda909;
+    --section-padding: 80px;
+}
+
+/* ================= End Variables ================= */
+
+
+/* ================= Start Global Rules ================= */
+* {
+    box-sizing: border-box;
+    text-align: right;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+    background-color: #f5f7fb;
+
+}
+
+.container {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* ================= End Global Rules ================= */
+
+
+/* ================= Start Page Title ================= */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+}
+
+header .img {
+    width: 40px;
+}
+
+header .img img {
+    max-width: 100%;
+}
+
+header .logo {
+    display: flex;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header .logo .img {
+    max-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-19%);
+    right: -10px;
+}
+
+header .logo h1 {
+    margin-right: 30px;
+    color: var(--maincolor);
+}
+
+header .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h1 {
+    text-align: center;
+    color: var(--maincolor);
+    font-size: 40px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background-color: var(--secondcolor);
+    position: absolute;
+    bottom: -10px;
+    right: 50%;
+    transform: translateX(50%);
+    border-radius: 10px;
+}
+
+/* ================= End Page Title ================= */
+
+
+/* ================= Start Logos ================= */
+.img-logo-left,
+.img-logo-right {
+    position: absolute;
+    top: 20px;
+    width: 70px;
+}
+
+.img-logo-left {
+    left: 20px;
+}
+
+.img-logo-right {
+    right: 20px;
+}
+
+.img-logo-left:hover,
+.img-logo-right:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* ================= End Logos ================= */
+
+
+/* ================= Start Sections ================= */
+.team,
+.goal,
+.special-thanks {
+    padding: 40px;
+    margin: 40px auto;
+    width: 85%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    transition: 0.3s ease;
+}
+
+.team:hover,
+.goal:hover,
+.special-thanks:hover {
+    transform: translateY(-8px);
+}
+
+/* ================= End Sections ================= */
+
+
+/* ================= Start Section Titles ================= */
+.team h2,
+.goal h2,
+.special-thanks h2 {
+    color: var(--maincolor);
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+
+/* ================= End Section Titles ================= */
+
+
+/* ================= Start Lists ================= */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 12px 0;
+    font-size: 18px;
+    position: relative;
+    padding-right: 20px;
+}
+
+/* النقطة قبل كل عنصر li */
+ul li::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-color: var(--secondcolor);
+    position: absolute;
+    right: 0;
+    top: 10px;
+    border-radius: 50%;
+}
+
+/* تنسيق a داخل li بنفس الـ li - لينك في نفس السطر */
+ul li a {
+    display: inline;
+    white-space: nowrap;
+    color: var(--maincolor);
+    text-decoration: none;
+    padding-right: 0;
+    /* لأن الـ li نفسها ليها padding */
+}
+
+ul li a:hover {
+    color: var(--maincolor);
+    text-decoration: underline;
+}
+
+/* ================= End Lists ================= */
+
+
+/* ================= Start Paragraph ================= */
+p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ================= End Paragraph ================= */
+
+
+/* ================= Start Footer ================= */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f1;
+    padding: 10px;
+    font-family: Arial;
+}
+
+/* ================= End Footer ================= */
+
+
+/* ================= Start Transfers Box ================= */
+.box-transfers {
+    display: flex;
+    /* يخليهم في خط واحد */
+    justify-content: center;
+    /* في النص */
+    gap: 40px;
+    /* مسافة 5 سم بينهم */
+}
+
+@media(max-width:747px) {
+    .box-transfers {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(20px, 1fr));
+    }
+}
+
+.transfers-1 {
+    text-decoration: none;
+    color: var(--maincolor);
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.transfers-1:hover {
+    color: #ffcc00;
+    /* أصفر أفتح عند المرور */
+}
+
+/* ================= End Transfers Box ================= */
+
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+
+    .team,
+    .goal,
+    .special-thanks {
+        width: 95%;
+        padding: 25px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .img-logo-left,
+    .img-logo-right {
+        width: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    ul li a {
+        font-size: 16px;
+    }
+}
+
+/* I need to mary start  */
+
+.team .goal div {
+    max-width: 300px;
+    padding: 20px;
+}
+
+.team .goal div img {
+    max-width: 100%;
+
+}
+
+
+/* I need to mary end  */
+/* date photo*/
+.goal{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.goal img{
+    width:100%;
+    max-width:900px;
+    height:auto;
+    display:block;
+}
+
+/*end date photo*/
