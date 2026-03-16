@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style-login.css">
+    <title>login-تسجيل الدخول</title>
+</head>
+
+    <h1 class="loginN">تسجيل الدخول الي <span class="highlight">SOFT WEB</span></h1>
+    <img src="static/images/softWebLogo.png" alt="School Image" class="school-image">
+    <form class="from" action="/login" method="post">
+        <label for="user">اسم المستخدم:</label>
+        <input type="text" id="user" name="user" required><br><br>
+
+        <label for="password">كلمة المرور:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <input class="btn-login" type="submit" value="تسجيل الدخول"><br>
+        <br><p>اذا كان يواجهك خطاء تواصل مع 01030891803</p>
+    </form>
+    <a href="index.html">الصفحة الرئيسية</a>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    const loginForm = document.querySelector('form'); 
+
+    if (loginForm) {
+        loginForm.addEventListener('submit', function(event) {
+            
+            event.preventDefault();
+
+            const userField = document.getElementById('user');
+            const passwordField = document.getElementById('password');
+
+            const username = userField.value;
+            const password = passwordField.value;
+
+            if (username === 'Mal201111@' && password === '_No_@_yES') {
+                
+
+                window.location.replace('users/1.html');
+                
+            } else if(username === 'Me.r.2022' && password === '@ab.c_2010'){
+                window.location.replace('users/2.html');
+            } else if(username === 'Dem.i.3000' && password === '#EF.g_N.L'){
+                window.location.replace('users/3.html');
+            } else if(username === 'Hamed.2010' && password === '@H#$No'){
+                window.location.replace('users/4.html');
+            } else if(username === 'Omar.Fe' && password === '$abNo._'){
+                window.location.replace('users/5.html');
+            } else if(username === 'Amar.sa3d' && password === '%?!2010'){
+                window.location.replace('users/6.html');
+            } else if(username === 'Morshede.20' && password === '?abc!mo_'){
+                window.location.replace('users/7.html');
+            } else if(username === 'Maged.No' && password === '_ma!g@'){
+                window.location.replace('users/8.html');
+            } else if(username === 'kat.3abd' && password === '_3ab!d@'){
+                window.location.replace('users/9.html');
+            } else if(username === 'yous.2010' && password === 'No_A_7'){
+                window.location.replace('users/10.html');
+            } else if(username === '9Tb.Mo' && password === 'yes_9Tb_'){
+                window.location.replace('users/11.html');
+            } else if(username === 'Fir.e.20..' && password === '3abdo_sh@'){
+                window.location.replace('users/12.html');
+            } else if(username === 'Abdo_20' && password === 'Ehab_sh@'){
+                window.location.replace('users/13.html');
+            } else if(username === 'sa3d_A7m' && password === 'A7m!ed.sa'){
+                window.location.replace('users/14.html');
+            } else if(username === 'Ad.am.El' && password === 'Ad.?m.@'){
+                window.location.replace('users/15.html');
+            } else if(username === 'ٍSam.a.El' && password === 'sa@ma_be$'){
+                window.location.replace('users/16.html');
+            } else if(username === 'He.m.m3' && password === 'He@$m3'){
+                window.location.replace('users/17.html');
+            } else if(username === '3bdo_He' && password === '3bdo.He@#'){
+                window.location.replace('users/18.html');
+            } else if(username === 'be-ra@' && password === 'Be_no#?'){
+                window.location.replace('users/19.html');
+            } else if(username === 'Abr.ar@$' && password === 'bero_EL!!'){
+                window.location.replace('users/20.html');
+            } else if(username === 'A7L@.am' && password === 'a7_!am_'){
+                window.location.replace('users/21.html');
+            } else if(username === 'Ema_?@' && password === 'E#ma!$'){
+                window.location.replace('users/22.html');
+            } else if(username === 'Basm_a?@' && password === 'Bes_M3?@'){
+                window.location.replace('users/23.html');
+            } else if(username === '7aniN#' && password === '7eno@a7#'){
+                window.location.replace('users/24.html');
+            } else if(username === 'Ay_a720' && password === '!Abo_A@#'){
+                window.location.replace('users/25.html');
+            } else if(username === '7am_o300' && password === 'BH.na_s$'){
+                window.location.replace('users/26.html');
+            } else if(username === '3zam_#@' && password === '@zoz_#!'){
+                window.location.replace('users/27.html');
+            } else {
+                alert('خطأ في اسم المستخدم أو كلمة المرور!');
+                passwordField.value = '';
+            }
+        });
+    }
+});
+    </script>
+</body>
+
+</html>
