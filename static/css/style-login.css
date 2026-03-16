@@ -1,0 +1,162 @@
+/* Reset بسيط */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* body */
+body {
+    background-image: url(../images/WhatsApp\ Image\ 2026-02-21\ at\ 1.50.20\ AM.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    direction: rtl; /* مهم للغة العربية */
+    padding: 20px;
+}
+
+/* عنوان الصفحة */
+.loginN {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.loginN .highlight {
+    color: #ffeb3b;
+    font-weight: bold;
+}
+
+/* صور المدرسة */
+.school-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.school-image-left {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: #fff;
+
+}
+
+.school-image-right {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.school-image:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+/* الفورم */
+.from {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: right;
+}
+
+/* الليبل والإنبوت */
+.from label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.from input[type="text"],
+.from input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1em;
+    outline: none;
+    transition: 0.3s;
+}
+
+.from input[type="text"]:focus,
+.from input[type="password"]:focus {
+    border-color: #74ebd5;
+    box-shadow: 0 0 8px rgba(116,235,213,0.5);
+}
+
+/* زر تسجيل الدخول */
+.btn-login {
+    width: 100%;
+    padding: 12px;
+    background: #74ebd5;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    background: #4fc3b7;
+}
+
+/* رابط التسجيل */
+a {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #fff;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ffeb3b;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .from {
+        padding: 20px;
+    }
+
+    .loginN {
+        font-size: 1.5em;
+    }
+
+    .school-image {
+        width: 80px;
+        height: 80px;
+    }
+}
