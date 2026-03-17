@@ -322,3 +322,16 @@ footer {
 
 
 /* I need to mary end  */
+/*Start contact*/
+.contact{
+    font-size: x-large;
+    color: rgb(0, 81, 255);
+    margin-bottom: 20px;
+    font-size: 26px;
+}
+.whatsapp{
+    font-size: x-large;
+    color: rgb(255, 0, 0);
+    margin-bottom: 20px;
+    font-size: 26px;
+}
