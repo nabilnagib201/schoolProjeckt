@@ -1,91 +1,300 @@
 <!DOCTYPE html>
-<html lang="ar" dir="ltr">
+<html lang="ar">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> مرحبا , ادمن !</title>
-    <link rel="stylesheet" href="../static/css/style-we.css">
-    <link rel="icon" href="../static/images/softWebLogo.png">
+    <title>قائمة الطلاب</title>
+    <link rel="stylesheet" href="../static/css/style-we.css"> <!-- ربط ملف CSS -->
 </head>
 <body>
-     <header>
-        <div class="container">
-            <div class="logo">
-                <h1>! مرحبا ادمن</h1>
-            </div>
-        </div>
-    </header>
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>قائمة الطلاب</title>
+    <style>
+        :root {
+            --maincolor: #1f496f;
+            --secondcolor: #fda909;
+            --section-padding: 80px;
+        }
 
-    <div class="team">
-            <div>
-                <h2>نسخه من مستخدمين</h2>
-                <h2>SOFT WEB نشكرك لمشاركتك في <br> حيث نسعي لتقديم محتوي تعليمي جيد</h2>
-                <h3 class="whatsapp" onclick="window.location.href='https://wa.me/201030891803'">تواصل عبر واتساب</h3>
-                <h3 class="contact" onclick="window.location.href='https://www.instagram.com/soft_wep/?utm_source=ig_web_button_share_sheet'">او اضغط لتواصل عبر انستجرام</h3>
-                <div class="goal">
-                    <h2>let و console.log</h2><br>
-                    <p class="goal-text">
-                        عباره let و تعني متغير و يضف اليها قيمه سواء كانت اعداد او نصوص و نستخدم console.log لعرض قيمه<br>
-                        let demiana = 500;<br>
-                        console.log(demiana);<br>
-                        let name = "yousef";<br>
-                        console.log(name);<br>
-                        في هذا برنامج استخدمنا let لحفظ قيمة و عرضناها باستخدام console.log<br>
-                        و كان عرض متغير الاول 500 و الثاني yousef<br><br>
-                        console.log يمكن ان تستخدم لعرض بدون متغيرات لاكن بشرط اضافه علامه تنصيص لنصوص و لا تضيف للارقام <br>
-                        الخلاصة : تستخدم ليت لحفظ قيمه و كونسول لعرضها 
-                    </p>
-                </div>
-                 <div class="goal">
-                    <h2>if</h2><br>
-                    <p>
-                        تستخدم if الشرطية بمعني اذا كان <br>
-                        مثال :<br>
-                        if (name == "nabil"){<br>
-                            console.log("welcome");<br>
-                        }<br>
-                        يعني هذا اذا كان المتغير name يساوي نبيل اطبع في واجهه مستخدم welcome
+        body {
+            font-family: "Work Sans", sans-serif;
+            margin: 0;
+            background-color: #f5f7fb;
+            text-align: right;
+        }
 
-                    </p>
-                 </div>
-                  <div class="goal">
-                    <h2>else if , else</h2><br>
-                    <p>
-                        تستخدم بمعني او كان او لم يحدث شئ مما سبق مثال :<br>
-                        if (ago == 15){<br>
-                            console.log("good");<br>
-                        } else if (ago == 10){<br>
-                            console.log("bad");<br>
-                        } else {<br>
-                            console.log("so bad");}<br>
-                            معني هذا يرنامج اذا كان العمر يساوي خمسه عشر يطبع جيد او اذا كان عشره يطبع سيء او اذا لم يكن اي شيء مما سبق اطبع سيء للغايه
-                    </p>
-                  </div>
-                  <div class="goal">
-                    <h2>or , and</h2><br>
-                    <p>
-                       || تعني او و علامتها  <br>
-                       &&  تعني و و علامتها  <br>
-                      : مثال <br>
-                      if (name == "demiana" && ago == 15){<br>
-                        console.log("hello girl");}<br>
-                        معني هذا اذا كان الاسم دميانه و العمر خمسه عشر اطبع في لوحه تحكم مرحبا ي فتاه <br>
-                        : مثال اخر <br>
-                        if(name == "demiana" || nameDad == "yousef"){<br>
-                            console.log("hi");}<br>
-                            بمعني اذا كان الاسم دميانه او الاب يوسف اطبع مرحبا 
-                    </p>
-                  </div>
-            </div>
-        </div>
-    <div class="transfers">
-        <div class="box-transfers">
-            <a class="transfers-1" href="../index.html">صفحه رئيسية</a>
-            <a class="transfers-1" href="../we.html">عنا</a>
-            <a class="transfers-1" href="../subjects/quizsic.html">الاسئله</a>
-            <a class="transfers-1" href="../news.html">الاخبار</a>
-        </div>
+        .container {
+            width: 85%;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+        }
 
+        h1 {
+            text-align: center;
+            color: var(--maincolor);
+            font-size: 40px;
+            margin-bottom: 20px;
+            position: relative;
+        }
 
+        h1::after {
+            content: "";
+            width: 80px;
+            height: 4px;
+            background-color: var(--secondcolor);
+            position: absolute;
+            bottom: -10px;
+            right: 50%;
+            transform: translateX(50%);
+            border-radius: 10px;
+        }
+
+        input {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid var(--maincolor);
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        th {
+            background-color: var(--maincolor);
+            color: white;
+        }
+
+        tr:hover {
+            background-color: #f2f2f2;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>قائمة الطلاب</h1>
+
+        <!-- مربع البحث -->
+        <input type="text" id="searchInput" placeholder="ابحث عن طالب...">
+
+        <!-- جدول الطلاب -->
+        <table id="studentsTable">
+            <tr>
+                <th>الاسم</th>
+                <th>اسم المستخدم</th>
+                <th>كلمة المرور</th>
+            </tr>
+            <tr>
+                <td>ملك مقلاش </td>
+                <td>Mal201111@</td>
+                <td>_No_@_yES</td>
+            </tr>
+            <tr>
+                <td>مهرائيل سعد</td>
+                <td>Me.r.2022</td>
+                <td>@ab.c_2010</td>
+            </tr>
+            <tr>
+                <td>يوسف حسن</td>
+                <td>yousefX</td>
+                <td>abc456</td>
+            </tr>
+            <tr>
+                <td>دميانه يوسف </td>
+                <td>Dem.i.3000</td>
+                <td>#EF.g_N.L</td>
+            </tr>
+            <tr>
+                <td>حامد الهطيل</td>
+                <td>Hamed.2010</td>
+                <td>@H#$No</td>
+            </tr>
+            <tr>
+                <td>عمر الفقي</td>
+                <td>Omar.Fe</td>
+                <td>$abNo._</td>
+            </tr>
+            <tr>
+                <td>عمار سعد كشك</td>
+                <td>Amar.sa3d </td>
+                <td>%?!2010</td>
+            </tr>
+            <tr>
+                <td>محمد مرشدي</td>
+                <td>Morshede.20 </td>
+                <td>?abc!mo_</td>
+            </tr>
+            <tr>
+                <td>ماجد محمد ابو علي</td>
+                <td>Maged.No </td>
+                <td>_ma!g@</td>
+            </tr>
+            <tr>
+                <td>محمد جلال عبداللا</td>
+                <td>kat.3abd </td>
+                <td>_3ab!d@</td>
+            </tr>
+            <tr>
+                <td>يوسف الغرابلي</td>
+                <td>yous.2010 </td>
+                <td>No_A_7.</td>
+            </tr>
+            <tr>
+                <td>محمد قطب</td>
+                <td>9Tb.Mo </td>
+                <td>yes_9Tb_</td>
+            </tr>
+            <tr>
+                <td>عبدالرحمن شرارة</td>
+                <td>Fir.e.20.. </td>
+                <td>3abdo_sh@</td>
+            </tr>
+            <tr>
+                <td>عبدالله ايهاب الشقيطي</td>
+                <td>Abdo_20 </td>
+                <td>Ehab_sh@</td>
+            </tr>
+            <tr>
+                <td>سعد جنزوري</td>
+                <td>sa3d_A7m</td>
+                <td>A7m!ed.sa</td>
+            </tr>
+            <tr>
+                <td>ادام الجبالي</td>
+                <td>Ad.am.El </td>
+                <td>Ad.?m.@</td>
+            </tr>
+            <tr>
+                <td>سما البليهي</td>
+                <td>ٍSam.a.El</td>
+                <td>sa@ma_be$</td>
+            </tr>
+            <tr>
+                <td>عبدالرحمن ابراهيم معجوز</td>
+                <td>He.m.m3</td>
+                <td>He@$m3</td>
+            </tr>
+            <tr>
+                <td>عبد الرحمن عمرو الهطيل</td>
+                <td>3bdo_He</td>
+                <td>3bdo.He@#</td>
+            </tr>
+            <tr>
+                <td>بريهان الهيتي</td>
+                <td>be-ra@</td>
+                <td>Be_no#?</td>
+            </tr>
+            <tr>
+                <td>ابرار البليهي</td>
+                <td>Abr.ar@$ </td>
+                <td>bero_EL!!</td>
+            </tr>
+            <tr>
+                <td>احلام البشبيشي</td>
+                <td>A7L@.am </td>
+                <td>a7_!am_</td>
+            </tr>
+            <tr>
+                <td>ايمان عبدالدايم</td>
+                <td>Ema_?@</td>
+                <td>E#ma!$</td>
+            </tr>
+            <tr>
+                <td>بسمة الهيتي</td>
+                <td>Basm_a?@</td>
+                <td>Bes_M3?@</td>
+            </tr>
+            <tr>
+                <td>حنين الغرابلي</td>
+                <td>7aniN#</td>
+                <td>7eno@a7#</td>
+            </tr>
+            <tr>
+                <td>اية ابوالعطا</td>
+                <td>Ay_a720 </td>
+                <td>!Abo_A@#</td>
+            </tr>
+            <tr>
+                <td>احمد ناصر بهنسي</td>
+                <td>7am_o300</td>
+                <td>BH.na_s$</td>
+            </tr>
+            <tr>
+                <td>احمد عزام</td>
+                <td>3zam_#@</td>
+                <td>@zoz_#!</td>
+            </tr>
+            <tr>
+                <td>جني سامح الميموني</td>
+                <td>jan_rts</td>
+                <td>jo@!ge28</td>
+            </tr>
+            <tr>
+                <td>منه جمال ناجي</td>
+                <td>me_na</td>
+                <td>me@#%gam</td>
+            </tr>
+            <tr>
+                <td>ملك محمد رشدي</td>
+                <td>mal@#k</td>
+                <td>mo$!@ham30</td>
+            </tr>
+            <tr>
+                <td>ملك شبل الاشقر</td>
+                <td>m_a_l#@!</td>
+                <td>ma_she31</td>
+            </tr>
+            <tr>
+                <td>عمر محمد اسماعيل بلتاجي</td>
+                <td>oma_R_32</td>
+                <td>bel_tag32</td>
+            </tr>
+        </table>
+    </div>
+
+    <footer>
+        لوحة ادمن Soft Web.
+    </footer>
+
+    <script>
+        document.getElementById("searchInput").addEventListener("keyup", function() {
+            let input = this.value.toLowerCase();
+            let rows = document.querySelectorAll("#studentsTable tr");
+
+            for (let i = 1; i < rows.length; i++) {
+                let cells = rows[i].getElementsByTagName("td");
+                let match = false;
+                for (let j = 0; j < cells.length; j++) {
+                    if (cells[j].innerText.toLowerCase().includes(input)) {
+                        match = true;
+                        break;
+                    }
+                }
+                rows[i].style.display = match ? "" : "none";
+            }
+        });
+    </script>
 </body>
 </html>
