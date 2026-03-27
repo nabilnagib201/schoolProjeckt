@@ -4,9 +4,145 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> مرحبا , دميانه يوسف !</title>
-    <link rel="stylesheet" href="../static/css/style-we.css">
     <link rel="icon" href="../static/images/softWebLogo.png">
 </head>
+<style>
+    :root {
+    --main-blue: #003366;
+    --main-orange: #f39c12;
+    --light-bg: #f4f6f9;
+    --dark: #222;
+}
+
+/* الأساسيات */
+body {
+    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
+    background: linear-gradient(to right, #eef2f7, #f8f9fa);
+    margin: 0;
+    padding: 0;
+    line-height: 1.8;
+    direction: rtl;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, var(--main-blue), #00509e);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Section */
+.team {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.team h2 {
+    color: var(--main-blue);
+    margin-bottom: 20px;
+}
+
+/* Buttons */
+.team h3 {
+    margin: 10px;
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+    font-size: 16px;
+}
+
+/* WhatsApp */
+.whatsapp {
+    background: linear-gradient(45deg, #25D366, #1ebe5d);
+}
+
+.whatsapp:hover {
+    transform: scale(1.05);
+}
+
+/* Instagram */
+.contact {
+    background: linear-gradient(45deg, #E1306C, #fd1d1d);
+}
+
+.contact:hover {
+    transform: scale(1.05);
+}
+
+/* Cards */
+.goal {
+    background: white;
+    margin: 25px auto;
+    padding: 30px;
+    border-radius: 20px;
+    max-width: 750px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    text-align: right;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.goal::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background: var(--main-orange);
+    right: 0;
+    top: 0;
+}
+
+.goal:hover {
+    transform: translateY(-8px);
+}
+
+.goal h2 {
+    color: var(--main-orange);
+    margin-bottom: 10px;
+}
+
+.goal p {
+    color: #555;
+}
+
+/* Navigation */
+.transfers {
+    margin: 50px 0;
+}
+
+.box-transfers {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.transfers-1 {
+    text-decoration: none;
+    color: white;
+    background: var(--main-blue);
+    padding: 12px 25px;
+    border-radius: 30px;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.transfers-1:hover {
+    background: var(--main-orange);
+    transform: scale(1.05);
+}
+</style>
 <body>
      <header>
         <div class="container">
