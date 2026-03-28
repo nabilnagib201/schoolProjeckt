@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> مرحبا , مهرائيل سعد !</title>
     <link rel="icon" href="../static/images/softWebLogo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <style>
     :root {
@@ -88,11 +89,17 @@ header {
     max-width: 750px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     text-align: right;
-    transition: 0.3s;
+    transition: all 0.6s ease;
     position: relative;
     overflow: hidden;
+    opacity: 0;
+    transform: translateY(40px);
 }
-
+.goal.show {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.6s ease;
+}
 .goal::before {
     content: "";
     position: absolute;
@@ -142,6 +149,23 @@ header {
     background: var(--main-orange);
     transform: scale(1.05);
 }
+
+.nav-item {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    background: linear-gradient(45deg, #E1306C, #fd1d1d);
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
 </style>
 <body>
      <header>
@@ -156,7 +180,7 @@ header {
             <div>
                 <h2>SOFT WEB نشكرك لمشاركتك في <br> حيث نسعي لتقديم محتوي تعليمي جيد</h2>
                 <h3 class="whatsapp" onclick="window.location.href='https://wa.me/201030891803'">تواصل عبر واتساب</h3>
-                <h3 class="contact" onclick="window.location.href='https://www.instagram.com/soft_wep/?utm_source=ig_web_button_share_sheet'">او اضغط لتواصل عبر انستجرام</h3>
+                <h3 class="contact" onclick="window.location.href='https://www.instagram.com/soft_wep/'">او اضغط لتواصل عبر انستجرام</h3>
                 <div class="goal">
                     <h2>let و console.log</h2><br>
                     <p class="goal-text">
@@ -168,7 +192,9 @@ header {
                         في هذا برنامج استخدمنا let لحفظ قيمة و عرضناها باستخدام console.log<br>
                         و كان عرض متغير الاول 500 و الثاني saad<br><br>
                         console.log يمكن ان تستخدم لعرض بدون متغيرات لاكن بشرط اضافه علامه تنصيص لنصوص و لا تضيف للارقام <br>
-                        الخلاصة : تستخدم ليت لحفظ قيمه و كونسول لعرضها 
+                        الخلاصة : تستخدم ليت لحفظ قيمه و كونسول لعرضها <br>
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+
                     </p>
                 </div>
                  <div class="goal">
@@ -179,7 +205,8 @@ header {
                         if (name == "nabil"){<br>
                             console.log("welcome");<br>
                         }<br>
-                        يعني هذا اذا كان المتغير name يساوي نبيل اطبع في واجهه مستخدم welcome
+                        يعني هذا اذا كان المتغير name يساوي نبيل اطبع في واجهه مستخدم welcome<br>
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
 
                     </p>
                  </div>
@@ -193,7 +220,9 @@ header {
                             console.log("bad");<br>
                         } else {<br>
                             console.log("so bad");}<br>
-                            معني هذا يرنامج اذا كان العمر يساوي خمسه عشر يطبع جيد او اذا كان عشره يطبع سيء او اذا لم يكن اي شيء مما سبق اطبع سيء للغايه
+                            معني هذا يرنامج اذا كان العمر يساوي خمسه عشر يطبع جيد او اذا كان عشره يطبع سيء او اذا لم يكن اي شيء مما سبق اطبع سيء للغايه<br>
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+
                     </p>
                   </div>
                   <div class="goal">
@@ -208,7 +237,26 @@ header {
                         : مثال اخر <br>
                         if(name == "mera" || nameDad == "saad"){<br>
                             console.log("hi");}<br>
-                            بمعني اذا كان الاسم ميرا او الاب سعد اطبع مرحبا 
+                            بمعني اذا كان الاسم ميرا او الاب سعد اطبع مرحبا <br>
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+
+                    </p>
+                  </div>
+
+                  <div class="goal">
+                    <h2>for</h2><br>
+                    <p>
+                       تعني كرر <br>
+                       مثال : <br>
+                       for (let i = 0; i < 5; i++ ){ <br>
+                        console.log("mera");}<br>
+                        دعينا نشرح هذا كود <br>
+                        السطر الاول بداء بجمله فور و التي تعنيي كرر بعدين اعلن عن متغير و بعد اعلن عن شرط اللي هو : <br>
+                        i < 5; i++ <br>
+                        معناه ان طول ما المتغير اقل من الخمسه ضيف واحد للمتغير <br>
+                        ناتج كود دا هيطبع اسمك (ميرا) خمس مرات <br>
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+
                     </p>
                   </div>
             </div>
@@ -221,6 +269,25 @@ header {
             <a class="transfers-1" href="../news.html">الاخبار</a>
         </div>
 
+<script>
 
+/* Animation عند النزول */
+const goals = document.querySelectorAll(".goal");
+
+window.addEventListener("scroll", () => {
+    goals.forEach(goal => {
+        let top = goal.getBoundingClientRect().top;
+        let screen = window.innerHeight;
+
+        if(top < screen - 100){
+            goal.classList.add("show");
+        }
+    });
+});
+
+/* تشغيل أولي */
+window.dispatchEvent(new Event("scroll"));
+
+</script>
 </body>
 </html>
