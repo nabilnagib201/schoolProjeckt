@@ -6,167 +6,8 @@
     <title> مرحبا , مهرائيل سعد !</title>
     <link rel="icon" href="../static/images/softWebLogo.png">
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/users.css">
 </head>
-<style>
-    :root {
-    --main-blue: #003366;
-    --main-orange: #f39c12;
-    --light-bg: #f4f6f9;
-    --dark: #222;
-}
-
-/* الأساسيات */
-body {
-    font-family: 'Cairo', 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(to right, #eef2f7, #f8f9fa);
-    margin: 0;
-    padding: 0;
-    line-height: 1.8;
-    direction: rtl;
-}
-
-/* Header */
-header {
-    background: linear-gradient(135deg, var(--main-blue), #00509e);
-    color: white;
-    padding: 25px 0;
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 28px;
-}
-
-/* Section */
-.team {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.team h2 {
-    color: var(--main-blue);
-    margin-bottom: 20px;
-}
-
-/* Buttons */
-.team h3 {
-    margin: 10px;
-    display: inline-block;
-    padding: 12px 25px;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: 0.3s;
-    color: white;
-    font-size: 16px;
-}
-
-/* WhatsApp */
-.whatsapp {
-    background: linear-gradient(45deg, #25D366, #1ebe5d);
-}
-
-.whatsapp:hover {
-    transform: scale(1.05);
-}
-
-/* Instagram */
-.contact {
-    background: linear-gradient(45deg, #E1306C, #fd1d1d);
-}
-
-.contact:hover {
-    transform: scale(1.05);
-}
-
-/* Cards */
-.goal {
-    background: white;
-    margin: 25px auto;
-    padding: 30px;
-    border-radius: 20px;
-    max-width: 750px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    text-align: right;
-    transition: all 0.6s ease;
-    position: relative;
-    overflow: hidden;
-    opacity: 0;
-    transform: translateY(40px);
-}
-.goal.show {
-    opacity: 1;
-    transform: translateY(0);
-    transition: 0.6s ease;
-}
-.goal::before {
-    content: "";
-    position: absolute;
-    width: 5px;
-    height: 100%;
-    background: var(--main-orange);
-    right: 0;
-    top: 0;
-}
-
-.goal:hover {
-    transform: translateY(-8px);
-}
-
-.goal h2 {
-    color: var(--main-orange);
-    margin-bottom: 10px;
-}
-
-.goal p {
-    color: #555;
-}
-
-/* Navigation */
-.transfers {
-    margin: 50px 0;
-}
-
-.box-transfers {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.transfers-1 {
-    text-decoration: none;
-    color: white;
-    background: var(--main-blue);
-    padding: 12px 25px;
-    border-radius: 30px;
-    transition: 0.3s;
-    font-weight: bold;
-}
-
-.transfers-1:hover {
-    background: var(--main-orange);
-    transform: scale(1.05);
-}
-
-.nav-item {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    border-radius: 20px;
-    background: linear-gradient(45deg, #E1306C, #fd1d1d);
-    color: white;
-    text-decoration: none;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.nav-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-</style>
 <body>
      <header>
         <div class="container">
@@ -256,9 +97,106 @@ header {
                         معناه ان طول ما المتغير اقل من الخمسه ضيف واحد للمتغير <br>
                         ناتج كود دا هيطبع اسمك (ميرا) خمس مرات <br>
                         <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
-
                     </p>
                   </div>
+                        
+                  <div class="goal">
+                    <h2>العمليات الحسابية</h2><br>
+                    <p>
+                        console.log(5 + 5); <br>
+                        console.log(5*5);  <br>
+                        console.log(5/5); <br>
+                        console.log(5-5); <br>
+                        اول حاجه الجمع بعدين الضرب بعدين القسمه بعدين الطرح . <br> ملاحظه : لا يمكن جمع نص الي رقم او العكس مثال : <br>
+                        let name = "mera"; <br>
+                        let age = 15; <br>
+                        console.log("age of " + name + " is " + age); <br>
+                        يكون الناتج : age of mera is 15 <br>
+                        
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+                    </p>  
+                  </div>             
+                        
+                     
+                  <div class="goal">
+                    <h2>function (الدوال)</h2><br>
+                    <p>
+                       مثال : <br>
+                        function mera(num1,num2){ <br>
+                            let result = num1 + num2; <br>
+                            return result; <br>
+                        } <br>
+                        console.log(mera(5,5)); <br>
+                        هيكون الناتج : 10  <br>
+                        انت هنا في اول سطر اعلنتي عن داله و فيها وسطين للمعلومات ممكن يتغيرو عادي جدا و لو لاحظتي فيه متغير تالت جوا الداله وظيفته بيجمع الوسطين و يخزنهم في الداله و اخر حاجه الارجاع و برا الداله اطبع بكونسول نتيجه  <br>
+                        مثال اخر :  <br>
+                        finction mera(num1,num2){  <br>
+                            let result = num1 * num2; <br>
+                            return result;}  <br>
+                        console.log("age of mera is " + mera(50,50)); <br>
+                        يكون ناتج : عمر ميرا ٢٥٠٠ يعني بقيتي ديناصور  <br>
+                        
+    
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+
+                    </p>
+                  </div>   
+
+                                    <div class="goal">
+                    <h2>typeof</h2><br>
+                    <p>
+                        تستخدم لتحدسد نوع المدخلات مثال : <br>
+                        let name = "mera"; <br>
+                        let age = 15; <br> 
+                        console.log(typeof name);<br>
+                        console.log(typeof age);<br>
+                        الناتج : <br>
+                        string <br>
+                        number <br>
+                        ملاحظه : كل ما هو داخل علامات التنصيص يعتبر نص
+                        <br>
+                        let name = "mera"; <br>
+                        let age = "15"; <br> 
+                        console.log(typeof name);<br>
+                        console.log(typeof age);<br>
+                        يكون الناتج : <br>
+                        string <br>
+                        string <br>
+                        <a class="nav-item" href="https://www.instagram.com/soft_wep/">اذا لم تفهم نواصل عبر انستجرام</a>
+                    </p>  
+                  </div>     
+                        
+                        
+<div class="goal special-thanks">
+    <h2>🎉 شكر خاص عزيزي المستخدم 🎉</h2>
+    <p>
+        احنا فخورين بيك جدًا إنك كملت الرحلة دي 💙<br><br>
+
+        ✨ انت من الناس المميزة اللي عندها إرادة حقيقية للتعلم<br>
+        🚀 وده مجرد بداية لمستقبل جامد جدًا باسم الصليب<br><br>
+
+        💬 CEO (Nabil):
+        <br>
+        بجد انت بطل 👏 كملت للنهاية وده إنجاز كبير جدًا، 
+        استمر ومتوقفش أبدًا 🔥<br><br>
+
+        👨‍💻 تيم Soft Web:
+        <br>
+        مستنيين نشوفك من أقوى المبرمجين قريب 💪💻<br><br>
+
+        🎊 كمل.. انت في الطريق الصح 🎊
+        <br><br>
+
+         💬 الدعم الفني (Omar):
+        <br>
+        برافو شاطرة كويس انك نجحتي في دا كله 👏 ربنا معاكي في كل اللي بتتمنيه، 
+       و زي ما قال الCEO استمر ومتوقفش أبدًا 🔥<br><br>
+
+        <a class="nav-item" href="https://www.instagram.com/soft_wep/">
+            تواصل معانا 💌
+        </a>
+    </p>
+</div>
             </div>
         </div>
     <div class="transfers">
