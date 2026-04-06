@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AI Soft Web</title>
+<title>Soft AI</title>
 <link rel="icon" href="../static/images/softWebLogo.png">
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -12,9 +12,24 @@
 <body>
 
 <header>
-    <h1>AI Soft Web</h1>
-    <p>صمم بواسطه نبيل نجيب مينا</p>
+  <div class="header-top">
+    <ul class="nav-menu">
+      <li><button>الرئيسية</button></li>
+      <li><button>من نحن</button></li>
+      <li><button>الأخبار</button></li>
+      <li><button>ملف شخصي</button></li>
+      <li><button class="theme-toggle" onclick="document.body.classList.toggle('old-theme')">
+        تبديل المظهر
+      </button></li>
+    </ul>
+  </div>
+
+  <h1>AI Soft Web</h1>
+  <p>صمم بواسطة نبيل نجيب مينا</p>
 </header>
+
+
+
 
 <div class="ai-box">
     <div class="chat" id="chat"></div>
