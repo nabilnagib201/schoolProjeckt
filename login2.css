@@ -1,0 +1,98 @@
+/* توسيط الصفحة */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+/* الفورم */
+.form-container {
+  width: 320px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+  border-radius: 10px;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+/* العنوان */
+.title {
+  text-align: center;
+  margin: 5px 0 15px 0;
+  font-size: 24px;
+  font-weight: 800;
+  font-family: sans-serif;
+}
+
+/* الفورم */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+/* الانبوت */
+.input {
+  border-radius: 20px;
+  border: 1px solid #c0c0c0;
+  padding: 10px 12px;
+  outline: none;
+  transition: 0.3s;
+}
+
+/* Hover + Focus للانبوت */
+.input:hover,
+.input:focus {
+  box-shadow: 0 0 8px rgba(0, 128, 128, 0.4);
+  border-color: teal;
+}
+
+/* forgot password */
+.page-link {
+  text-align: right;
+  margin: 0;
+}
+
+.page-link-label {
+  font-size: 10px;
+  cursor: pointer;
+  color: #777;
+}
+
+.page-link-label:hover {
+  color: black;
+}
+
+/* زرار login */
+.form-btn {
+  padding: 8px;
+  border-radius: 20px;
+  border: none;
+  background: teal;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Hover للزرار */
+.form-btn:hover {
+  background: #006666;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* تسجيل حساب */
+.sign-up-label {
+  font-size: 10px;
+  color: #777;
+  text-align: center;
+}
+
+.sign-up-link {
+  color: teal;
+  cursor: pointer;
+  font-weight: bold;
+}
