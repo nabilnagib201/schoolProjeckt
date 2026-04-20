@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>بوابة تعليمية</title>
+  <link rel="icon" href="../static/images/softWebLogo.png">
+  <style>
+/* ---------- تحسينات عامة للستايل ---------- */
+body {
+  font-family: Tahoma, Arial, "Helvetica Neue", sans-serif;
+  background: linear-gradient(180deg, #f7fbff 0%, #ffffff 100%);
+  margin: 0;
+  padding: 0;
+  direction: rtl;
+  color: #222;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  background-color: #0f62a8;
+  color: #fff;
+  padding: 18px 12px;
+  text-align: center;
+  box-shadow: 0 3px 10px rgba(16,24,40,0.08);
+}
+
+header .logo { height: 56px; display:block; margin:0 auto 8px }
+header h1 { margin:0; font-size:22px }
+
+.education-center { max-width:980px; margin:36px auto; padding:0 18px }
+.education-center h2 { text-align:center; margin-bottom:26px; font-size:28px; color:#0b3b66 }
+
+/* بطاقات قابلة للاستجابة باستخدام grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  align-items: start;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 6px 18px rgba(11,33,66,0.06);
+  transition: transform .22s ease, box-shadow .22s ease;
+}
+.card:hover { transform: translateY(-6px); box-shadow: 0 10px 30px rgba(11,33,66,0.08) }
+.card h3 { margin: 8px 0 14px; font-size:18px; color:#0b3b66 }
+
+/* أزرار متناسقة */
+.nav-button, button {
+  background: #0f62a8;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background .18s ease, transform .12s ease;
+}
+.nav-button:hover, button:hover { background:#0b4f84; transform: translateY(-1px) }
+
+/* تأثير خط تحت العناوين */
+h2, h3 { position:relative; display:inline-block }
+h2::after { content:""; position:absolute; left:0; bottom:-6px; height:3px; width:60%; background:#0f62a8; border-radius:2px }
+
+/* تحسينات للعرض على الشاشات الصغيرة */
+@media (max-width:520px) {
+  .education-center { margin:18px 12px }
+  header .logo { height:48px }
+  .card { padding:16px }
+}
+
+/* فاصل مرن في الأسفل */
+.cards + .spacer { height:30px }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- شعار -->
+  <header class="header">
+    <img src="../static/images/softWebLogo.png" alt="soft web" class="logo">
+    <h1>بوابة التعليم</h1>
+  </header>
+
+  <!-- مركز التعليم -->
+  <section class="education-center">
+    <h2>مركز التعليم</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 onclick="window.location.href='css.html'">Learn CSS</h3><br>
+        <button onclick="window.location.href='css.html'" class="nav-button">Learn css</button>
+      </div>
+      <div class="card">
+        <h3 onclick="window.location.href='js.html'">Learn JavaScript</h3><br>
+        <button onclick="window.location.href='js.html'" class="nav-button">Learn javascript</button>
+      </div>
+      <div class="card">
+        <h3 onclick="window.location.href='html.html'">Learn HTML</h3> <br>
+        <button onclick="window.location.href='html.html'">Learn html</button>
+      </div>
+      
+    </div>
+  </section>
+</body>
+</html>
